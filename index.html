@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 col-md-8 d-flex align-items-center">
+            <!-- Logo Instagram blanco y negro -->
+            <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram Logo Blanco y Negro"
+                class="me-2 ms-2" style="width: 30px; height: auto;">
+
+
+            <!-- Texto -->
+            <span class="fw-bold">Instagram</span>
+        </div>
+        <div class="col-6 col-md-3 d-flex justify-content-end">
+            <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#postModal">
+                Create a new post
+            </button>
+        </div>
+
+        <!-- Tercera columna -->
+        <div class="col-5 col-md-1 d-flex justify-content-start align-items-center mt-2">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSettings"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownSettings">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Encabezado del modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="postModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                    <label for="postCaption" class="form-label">Caption:</label>
+                    <textarea class="form-control" id="postCaption" rows="3"
+                        placeholder="Add the caption of your post here"></textarea>
+
+                    <!-- Botones de imagen y ubicación -->
+                    <div class="mt-3 d-flex gap-2">
+                        <button class="btn btn-light"><i class="bi bi-camera"></i></button>
+                        <button class="btn btn-light"><i class="bi bi-geo-alt"></i></button>
+                    </div>
+                </div>
+
+                <!-- Pie del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-4">
+        <!-- Botones -->
+        <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-vertical-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-vertical" type="button" role="tab" aria-controls="pills-vertical"
+                    aria-selected="true"><img src="https://dummyimage.com/50x50/000000/000000.png" width="20"
+                        alt="Vertical">
+
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-grid-tab" data-bs-toggle="pill" data-bs-target="#pills-grid"
+                    type="button" role="tab" aria-controls="pills-grid" aria-selected="false">
+                    <img src="https://www.svgrepo.com/show/344890/grid-3x3.svg" width="30" height="30" alt="Vista Grid"
+                        style="object-fit: contain;" width="30" alt="Vista Grid">
+                </button>
+            </li>
+        </ul>
+
+
+        <!-- Contenido -->
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Vista Vertical -->
+            <div class="tab-pane fade show active" id="pills-vertical" role="tabpanel"
+                aria-labelledby="pills-vertical-tab">
+                <div class="row gx-0 gy-2 justify-content-center">
+                    <div class="col-12"><img src="https://picsum.photos/400?random=1" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=2" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=3" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=4" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=5" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=6" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=7" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=8" class="img-fluid rounded"></div>
+                    <div class="col-12"><img src="https://picsum.photos/400?random=9" class="img-fluid rounded"></div>
+                </div>
+            </div>
+
+            <!-- Vista Grid -->
+            <div class="tab-pane fade" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+                <div class="row gx-1 gy-2 justify-content-center">
+                    <div class="col-4"><img src="https://picsum.photos/400?random=1" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=2" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=3" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=4" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=5" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=6" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=7" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=8" class="img-fluid rounded"></div>
+                    <div class="col-4"><img src="https://picsum.photos/400?random=9" class="img-fluid rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
